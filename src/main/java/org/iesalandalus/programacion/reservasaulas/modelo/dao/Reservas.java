@@ -164,36 +164,34 @@ public class Reservas {
 		return reservasAula;
 		
 	}
+
 	public Reserva[] getReservasPermanencia(Permanencia permanencia) {
-		
+
 		Reserva[] reservasPermanencia = new Reserva[MAX_RESERVAS];
 		int indice = 0;
-		for (int i = 0; i < numReservas; i++){
+		for (int i = 0; i < numReservas; i++) {
 			if (reservasHechas[i].getPermanencia().equals(permanencia)) {
 				reservasPermanencia[indice] = new Reserva(reservasHechas[i]);
 				indice++;
 			}
 		}
 		return reservasPermanencia;
-		
-	}
-	
-	public boolean consultarDisponibilidad(Aula aula,Permanencia permanencia) {
-		
 
-     	if(aula==null)
-            throw new IllegalArgumentException("No se puede consultar la disponibilidad de un aula nula.");
-	if(permanencia==null)
-            throw new IllegalArgumentException("No se puede consultar la disponibilidad de una permanencia nula.");
-	
-        for(int i = 0; i<reservasHechas.length && reservasHechas[i]!=null; i++) {
-            
-            if(reservasHechas[i].getAula().equals(aula) && reservasHechas[i].getPermanencia().equals(permanencia))
-		return false;
 	}
 	
-        return true;
-	
-    }
+	public boolean consultarDisponibilidad(Aula aula, Permanencia permanencia) {
+
+		if (aula == null)
+			throw new IllegalArgumentException("No se puede consultar la disponibilidad de un aula nula.");
+		if (permanencia == null)
+			throw new IllegalArgumentException("No se puede consultar la disponibilidad de una permanencia nula.");
+		for (int i = 0; i < reservasHechas.length && reservasHechas[i] != null; i++) {
+			if (reservasHechas[i].getAula().equals(aula) && reservasHechas[i].getPermanencia().equals(permanencia))
+				return false;
+		}
+
+		return true;
+
+	}
 	
 }
