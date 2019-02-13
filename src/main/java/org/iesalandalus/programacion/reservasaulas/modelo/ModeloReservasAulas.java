@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.reservasaulas.modelo;
 
 
+import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.reservasaulas.modelo.dao.*;
 import org.iesalandalus.programacion.reservasaulas.modelo.dominio.*;
 
@@ -37,12 +39,14 @@ public class ModeloReservasAulas {
 		return aulas.buscar(aula);
 	}
 
-	public void insertarAula(Aula aula) {
+	public void insertarAula(Aula aula)throws OperationNotSupportedException {
 
+		aulas.insertar(aula);
 	}
 
-	public void borrarAUla(Aula aula) {
+	public void borrarAUla(Aula aula) throws OperationNotSupportedException {
 
+		aulas.borrar(aula);
 	}
 
 	public Profesor[] getProfesores() {
@@ -65,12 +69,14 @@ public class ModeloReservasAulas {
 		return profesores.buscar(profesor);
 	}
 
-	public void insertarProfesor(Profesor profesor) {
+	public void insertarProfesor(Profesor profesor)throws OperationNotSupportedException {
 
+		profesores.insertar(profesor);
 	}
 
-	public void borrarProfesor(Profesor profesor) {
+	public void borrarProfesor(Profesor profesor)throws OperationNotSupportedException {
 
+		profesores.borrar(profesor);
 	}
 
 	public Reserva[] getReservas() {
@@ -93,12 +99,14 @@ public class ModeloReservasAulas {
 		return reservas.buscar(reserva);
 	}
 
-	public void realizarReserva(Reserva reserva) {
+	public void realizarReserva(Reserva reserva)throws OperationNotSupportedException {
 
+		reservas.insertar(reserva);
 	}
 
-	public void anularReserva(Reserva reserva) {
+	public void anularReserva(Reserva reserva)throws OperationNotSupportedException {
 
+		reservas.borrar(reserva);
 	}
 
 	public Reserva[] getReservasAulas(Aula aula) {
