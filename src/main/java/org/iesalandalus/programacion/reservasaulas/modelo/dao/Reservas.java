@@ -69,9 +69,7 @@ public class Reservas {
         } else {
             if (indiceNoSuperaCapacidad(indice)) {
             throw new OperationNotSupportedException("La reserva ya existe.");
-            } else {
-		throw new OperationNotSupportedException("No se aceptan más reservas.");		
-            }
+            } 
         }
 	}    
 	
@@ -143,9 +141,6 @@ public class Reservas {
 		
 		Reserva[] reservasProfesor = new Reserva[MAX_RESERVAS];
 		int indice = 0;
-		if (profesor == null) {
-			throw new IllegalArgumentException("");
-		}
 		for (int i=0; i < numReservas; i++){
 			if (reservasHechas[i].getProfesor().equals(profesor)) {
 				reservasProfesor[indice] = new Reserva(reservasHechas[i]);
