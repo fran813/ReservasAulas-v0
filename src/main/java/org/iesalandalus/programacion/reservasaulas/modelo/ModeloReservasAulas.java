@@ -44,7 +44,7 @@ public class ModeloReservasAulas {
 		aulas.insertar(aula);
 	}
 
-	public void borrarAUla(Aula aula) throws OperationNotSupportedException {
+	public void borrarAula(Aula aula) throws OperationNotSupportedException {
 
 		aulas.borrar(aula);
 	}
