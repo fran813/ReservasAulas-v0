@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.reservasaulas.vista;
 
-import org.iesalandalus.programacion.gestionclientes.vista.IUTextual;
+
 
 public enum Opcion {
 
