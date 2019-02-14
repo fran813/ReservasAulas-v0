@@ -124,7 +124,7 @@ public class ModeloReservasAulas {
 		return reservas.getReservasPermanencia(permanencia);
 	}
 
-	public boolean conultarDisponibilidad(Aula aula, Permanencia permanencia) {
+	public boolean consultarDisponibilidad(Aula aula, Permanencia permanencia) {
 
 		return reservas.consultarDisponibilidad(aula, permanencia);
 	}

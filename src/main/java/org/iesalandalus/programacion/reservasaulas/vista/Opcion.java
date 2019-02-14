@@ -51,12 +51,12 @@ public enum Opcion {
 	},
 	INSERTAR_RESERVA("Insertar reserva") {
 		public void ejecutar() {
-			vista.insertarReserva();
+			vista.realizarReserva();
 		}
 	},
 	BORRAR_RESERVA("Borrar reserva") {
 		public void ejecutar() {
-			vista.borrarReserva();
+			vista.anularReserva();
 		}
 	},
 	LISTAR_RESERVAS("Listar reservas") {
