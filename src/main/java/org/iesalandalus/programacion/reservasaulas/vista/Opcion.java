@@ -19,9 +19,9 @@ public enum Opcion {
 			vista.borrarAula();
 		}
 	},
-	BUSCAR_CLIENTE("Buscar cliente") {
+	BUSCAR_AULA("Buscar aula") {
 		public void ejecutar() {
-			vista.buscarCliente();
+			vista.buscarAula();
 		}
 	},
 	LISTAR_AULAS("Listar aulas") {
